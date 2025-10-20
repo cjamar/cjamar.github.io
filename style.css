@@ -17,7 +17,7 @@
 
   /* Gradients */
   --metal-light: #f0f0f0;
-  --metal-dark: #b3f5ff;
+  --metal-dark: #ccf8ff;
 }
 
 body {
@@ -183,7 +183,7 @@ img {
   text-align: center;
   background: var(--secondary-bg);
   border-radius: 0.3em;
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
 }
 
@@ -194,24 +194,24 @@ img {
   transition: transform 0.3s ease, filter 0.3s ease; /* <-- importante */
 }
 
-.overlay-project {
+/* .overlay-project {
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7); /* semi-transparente */
+  background: rgba(0, 0, 0, 0.7); 
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 1em;
   font-family: "Antonio";
   font-size: 2em;
   color: var(--white-font-primary);
-}
+} */
 
-.item-gallery:hover .overlay-project {
+/* .item-gallery:hover .overlay-project {
   opacity: 1;
-}
+} */
 
 .container-project {
   display: flex;
