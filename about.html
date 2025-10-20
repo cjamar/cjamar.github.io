@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" lang="es" />
+  <meta name="description" content="Carlos Jamar Web" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav class="nav-header">
+    <div class="logo">
+      <a href="index.html"> <img src="assets/img/logo.png" alt="logo" /></a>
+    </div>
+    <ul id="menu" class="nav-items">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a
+          href="https://github.com/cjamar"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/carlos-jamar/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.behance.net/carlos_jamar"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-behance"></i
+        ></a>
+      </li>
+    </ul>
+    <div id="menu-btn" class="hamburguer-menu">
+      <i id="menu-icon" class="fa-solid fa-grip-lines"></i>
+    </div>
+  </nav>
+
+  <div class="main-about-container">
+    <div class="img-about-container">
+      <img src="assets/img/me.png" alt="my-picture" />
+    </div>
+    <div class="text-about-container">
+      <h1>About me</h1>
+      <p>
+        Hey there! I’m Carlos, App Developer & Graphic Designer. For as long as
+        I can remember, drawing has become my main attraction. My studies as a
+        designer allowed me to me to specialise in editorial projects and
+        signage. I had a great passion for infographics and data, which helped
+        me to create my first commercial project called “Harry Potter Potter:
+        through maps”. I am currently working on other personal projects,
+        considering them as a hobby at the moment. From web design I got to know
+        programming, which allowed me to open myself to more complete and
+        enriching projects, such as applications and webs (and videogames
+        sometimes). More than 5 years of experience in communication agency
+        specialising in web design, infographics, editorial & branding and 1
+        year of experience in App Development Agency. When the work is fruitful,
+        the exigency for details keeps me awake at night. If there is a good
+        connection, I like to work as a team.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <small>© 2025 Carlos Jamar. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Esto es lo del despliegue del navegador-->
+  <script>
+    const menu = document.getElementById("menu");
+    const btn = document.getElementById("menu-btn");
+    const icon = document.getElementById("menu-icon");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      icon.classList.toggle("rotated");
+      if (icon.classList.contains("fa-grip-lines")) {
+        icon.classList.remove("fa-grip-lines");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-grip-lines");
+      }
+    });
+  </script>
+</body>

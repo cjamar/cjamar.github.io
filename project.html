@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" lang="es" />
+  <meta name="description" content="Carlos Jamar Web" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav class="nav-header">
+    <div class="logo">
+      <a href="index.html"> <img src="assets/img/logo.png" alt="logo" /></a>
+    </div>
+    <ul id="menu" class="nav-items">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a
+          href="https://github.com/cjamar"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/carlos-jamar/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.behance.net/carlos_jamar"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-behance"></i
+        ></a>
+      </li>
+    </ul>
+    <div id="menu-btn" class="hamburguer-menu">
+      <i id="menu-icon" class="fa-solid fa-grip-lines"></i>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="container-project">
+      <div class="container-back-to-projects">
+        <a href="index.html" class="back-to-projects">
+          <i class="fas fa-arrow-left"> Volver a proyectos</i>
+        </a>
+      </div>
+      <div class="text-project">
+        <h1 id="title"></h1>
+        <h3 id="description"></h3>
+      </div>
+      <div id="project-images"></div>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer>
+    <div class="footer-container">
+      <small>© 2025 Carlos Jamar. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Aqui viene lo de js para cargar dinamicamente los proyectos
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch("projects.json")
+      .then((response) => response.json())
+      .then((projects) => {
+        const project = projects[id];
+
+        if (!project) {
+          document.body.innerHTML = "<h1>Proyecto no encontrado</h1>";
+          return;
+        }
+
+        document.querySelector("#title").textContent = project.title;
+        document.querySelector("#description").textContent =
+          project.description;
+        // document.querySelector("#image").src = project.image;
+
+        const container = document.querySelector("#project-images");
+        container.innerHTML = "";
+
+        project.images.forEach((src) => {
+          console.log("Cargando imagen:", src);
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = project.title;
+          container.appendChild(img);
+        });
+      })
+      .catch((err) => {
+        console.error("Error cargando proyectos:", err);
+      });
+
+    // Esto es lo de despliegue del navegador
+    const menu = document.getElementById("menu");
+    const btn = document.getElementById("menu-btn");
+    const icon = document.getElementById("menu-icon");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      icon.classList.toggle("rotated");
+      if (icon.classList.contains("fa-grip-lines")) {
+        icon.classList.remove("fa-grip-lines");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-grip-lines");
+      }
+    });
+
+    // Esto es el botón de volver arriba
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Mostrar el botón cuando se hace scroll hacia abajo
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "flex";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
+
+    // Volver arriba suavemente
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
