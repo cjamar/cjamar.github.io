@@ -1,7 +1,7 @@
 {
   "p1": {
     "title": "Harry Potter: a través de los mapas",
-    "description": "Una guia de viaje no oficial para moverse por el mundo mágico",
+    "description": "An unofficial Travel Guide for navigating the magical world. Original idea, Editorial & Signage",
     "images": [
       "assets/img/projects/hp1.jpg",
       "assets/img/projects/hp2.jpg",
@@ -15,19 +15,19 @@
 
   "p2": {
     "title": "Greeny App",
-    "description": "Una app para localizar, cuidar y aprender de tus plantas",
+    "description": "Garden Management and Maintenance. Developed with Flutter, Designed with Figma",
     "images": ["assets/img/projects/gr1.png", "assets/img/projects/gr2.png"]
   },
 
   "p3": {
     "title": "Rick & Morty Api App",
-    "description": "Una api de Rick y Morty",
+    "description": "Api App. Developed with Flutter, Designed with Figma",
     "images": ["assets/img/projects/rm1.png"]
   },
 
   "p4": {
     "title": "Drinkover",
-    "description": "Un juego de cartas para derrotar a tus amigos y ser el rey de la fiesta",
+    "description": "Cardgame Design, Illustration & Game Mechanics",
     "images": [
       "assets/img/projects/dr1.png",
       "assets/img/projects/dr2.png",
@@ -38,7 +38,7 @@
 
   "p5": {
     "title": "Arcanos",
-    "description": "Branding y diseño de tipografía de grupo Arcanos",
+    "description": "Branding and Typography Design for Arcanos group",
     "images": [
       "assets/img/projects/ar2.png",
       "assets/img/projects/ar3.png",
@@ -47,8 +47,8 @@
   },
 
   "p6": {
-    "title": "Proyecto 6",
-    "description": "Descripción del proyecto 6",
+    "title": "My next project...",
+    "description": "...",
     "images": ["assets/img/projects/p6.jpg"]
   }
 }
