@@ -95,6 +95,10 @@ img {
   gap: 5em;
 }
 
+.main-contact-container h1 {
+  text-align: center;
+}
+
 .contact-item {
   display: flex;
   flex-direction: column;
@@ -288,6 +292,17 @@ small {
 }
 
 @media (max-width: 600px) {
+  .contact-text-container {
+    flex-direction: column;
+    align-content: center;
+    gap: 2em;
+  }
+
+  .text-about-container {
+    width: 90%;
+    padding: 0;
+  }
+
   .grid-gallery {
     width: 95%;
   }
