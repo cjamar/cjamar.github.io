@@ -47,8 +47,14 @@
   },
 
   "p6": {
-    "title": "My next project...",
-    "description": "...",
-    "images": ["assets/img/projects/p6.jpg"]
+    "title": "Canvas-sketch",
+    "description": "Developed with Javascript",
+    "images": [
+      "assets/img/projects/sk1.png",
+      "assets/img/projects/sk2.png",
+      "assets/img/projects/sk3.png",
+      "assets/img/projects/sk4.png",
+      "assets/img/projects/sk5.png"
+    ]
   }
 }
