@@ -23,6 +23,16 @@
   />
 </head>
 <body>
+  <div id="preloader">
+    <lottie-player
+      src="assets/animations/loader.json"
+      loop
+      autoplay
+      style="width: 80px; height: 80px"
+    >
+    </lottie-player>
+  </div>
+
   <nav class="nav-header">
     <div class="logo">
       <a href="index.html"> <img src="assets/img/logo.png" alt="logo" /></a>
@@ -115,6 +125,32 @@
         icon.classList.remove("fa-xmark");
         icon.classList.add("fa-grip-lines");
       }
+    });
+  </script>
+  // para cargar los lotties (animaciones)
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  // Para mostrar el preloader
+  <script>
+    const preloader = document.getElementById("preloader");
+
+    window.addEventListener("load", () => {
+      // Si ya se mostró, lo escondemos de inmediato
+      if (sessionStorage.getItem("preloaderShown")) {
+        preloader.style.display = "none";
+        return;
+      }
+
+      const MIN_TIME = 2000; // tiempo mínimo que se ve el loader
+      const startTime = performance.now();
+
+      const elapsed = performance.now() - startTime;
+      const remaining = Math.max(0, MIN_TIME - elapsed);
+
+      setTimeout(() => {
+        preloader.classList.add("hide"); // tu transición de CSS
+        sessionStorage.setItem("preloaderShown", "true");
+      }, remaining);
     });
   </script>
 </body>
