@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
   <meta charset="UTF-8" lang="es" />
   <meta name="description" content="Carlos Jamar Web" />
@@ -10,7 +10,7 @@
   />
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,7 +71,15 @@
     </div>
   </nav>
 
-  <div class="main-container">
+  <div class="main-home-container">
+    <div class="hero-section">
+      <h3>
+        Hi, I’m Carlos — <span id="hero-blue">Developer</span> &
+        <span id="hero-blue">Designer</span>
+      </h3>
+      <h3><span id="typed-text"></span></h3>
+    </div>
+
     <div class="grid-gallery">
       <a href="project.html?id=p1" class="item-gallery"
         ><img
@@ -151,6 +159,24 @@
         preloader.classList.add("hide"); // tu transición de CSS
         sessionStorage.setItem("preloaderShown", "true");
       }, remaining);
+    });
+  </script>
+
+  <!-- Para dar animacion a las letras hero -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed("#typed-text", {
+      strings: [
+        "crafting digital experiences",
+        "building intuitive interfaces",
+        "turning ideas into products",
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1200,
+      startDelay: 500,
+      loop: true,
+      smartBackspace: true,
     });
   </script>
 </body>
