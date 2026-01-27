@@ -391,6 +391,11 @@ small {
     padding: 6em 0 4em 0;
   }
 
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .item-gallery {
     flex: 1 1 calc(50% - 20px);
   }
@@ -502,8 +507,8 @@ small {
 
   .hamburguer-menu {
     display: flex;
-    justify-content: end;
-    width: 80%;
+    justify-content: center;
+    width: 60px;
     height: 60px;
   }
 
