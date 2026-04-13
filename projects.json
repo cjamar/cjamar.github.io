@@ -1,17 +1,28 @@
 {
-  "p0": {
+  "p1": {
+    "title": "Worn-eApp {IN PROGRESS}",
+    "description": "A clothes sharing app built with Flutter and designed with Figma.",
+    "images": ["assets/img/projects/wo1.png"]
+  },
+  "p2": {
     "title": "Nubli App {IN PROGRESS}",
     "description": "A shared notes and lists minimalist app built with Flutter and designed with Figma.",
     "images": ["assets/img/projects/nu1.png"]
   },
 
-  "p2": {
+  "p3": {
     "title": "Greeny App",
     "description": "Garden Management and Maintenance. Developed with Flutter, Designed with Figma",
     "images": ["assets/img/projects/gr1.png", "assets/img/projects/gr2.png"]
   },
 
-  "p1": {
+  "p4": {
+    "title": "Rick & Morty Api App",
+    "description": "Api App. Developed with Flutter, Designed with Figma",
+    "images": ["assets/img/projects/rm1.png"]
+  },
+
+  "p5": {
     "title": "Harry Potter: a través de los mapas",
     "description": "An unofficial Travel Guide for navigating the magical world. Original idea, Editorial & Signage",
     "images": [
@@ -25,13 +36,7 @@
     ]
   },
 
-  "p3": {
-    "title": "Rick & Morty Api App",
-    "description": "Api App. Developed with Flutter, Designed with Figma",
-    "images": ["assets/img/projects/rm1.png"]
-  },
-
-  "p4": {
+  "p6": {
     "title": "Drinkover",
     "description": "Cardgame Design, Illustration & Game Mechanics. \n https://asociacionludo.com/prototipo/325/drink-over",
     "images": [
@@ -42,7 +47,7 @@
     ]
   },
 
-  "p5": {
+  "p7": {
     "title": "Arcanos",
     "description": "Branding and Typography Design for Arcanos group",
     "images": [
@@ -52,7 +57,7 @@
     ]
   },
 
-  "p6": {
+  "p8": {
     "title": "Canvas-sketch",
     "description": "Developed with Javascript",
     "images": [
