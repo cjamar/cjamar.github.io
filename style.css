@@ -12,7 +12,7 @@
   --secondary-bg: #303030;
   /* Fonts */
   --white-font-primary: #ededed;
-  --white-font-secondary: #c8c8c8;
+  --white-font-secondary: #e1e1e1;
   --dark-font: #5e5e5e;
   --blue-font: #3ae5ff;
   --red-font: #ff4d65;
@@ -47,9 +47,9 @@ body,
 nav,
 .nav-items {
   background-color: var(--primary-bg);
-  background-image:
+  /* background-image:
     radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 37, 37, 0.85), rgba(37, 37, 37, 1));
+    linear-gradient(to bottom, rgba(37, 37, 37, 0.85), rgba(37, 37, 37, 1)); */
   background-size:
     20px 20px,
     100% 100%;
@@ -221,6 +221,11 @@ img {
   border-radius: 1.2em;
 }
 
+.btn-download-container a,
+.btn-download-container a i {
+  color: var(--primary-bg);
+}
+
 .btn-download {
   padding: 10px 20px;
   text-decoration: none;
@@ -228,7 +233,7 @@ img {
 }
 
 .btn-download-container:hover {
-  background: var(--blue-font);
+  background-color: var(--blue-font);
 }
 
 .btn-download i {
